@@ -5,7 +5,7 @@
 #include <LiquidCrystal_I2C.h>
 #ifndef APSSID
 #define APSSID "BadgeSFW1"
-#define APPSK  "AlexLamb1234"
+#define APPSK  "Password"
 #endif
 void handleRoot();              // function prototypes for HTTP handlers
 void handleLogin();
