@@ -4,8 +4,8 @@
 #include <Wire.h> 
 #include <LiquidCrystal_I2C.h>
 #ifndef APSSID
-#define APSSID "BadgeSFW1"
-#define APPSK  "Password"
+#define APSSID "BadgeSFW1"  //SSID
+#define APPSK  "Password"   //PSK
 #endif
 void handleRoot();              // function prototypes for HTTP handlers
 void handleLogin();
