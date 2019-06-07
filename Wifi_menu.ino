@@ -18,15 +18,15 @@ ESP8266WebServer server(80);
 // Go to http://192.168.4.1 in a web browser
 void handleRoot() {
 server.send(200, "text/html", "<head> <meta name='viewport' content='width=device-width,initial-scale=1'><title>Insert Text</title>"
-"<style>html, body {width: 300%;height: 300%;;margin: 0;padding: 0;background-color: red;}h1{margin: 0;padding: 0; } .button:hover { background-color: #4CAF50; /* Green button */color: white; }.button{-webkit-transition-duration: 0.4s; /* Safari */transition-duration: 0.4s; }"
-"</style></head><center>"
+"<style>html, body {width: 300%;height: 300%;margin: 0;padding: 0;background-color: red;} .button:hover { background-color: #4CAF50; /* Green button */color: white; }.button{-webkit-transition-duration: 0.4s; /* Safari */transition-duration: 0.4s; }"
+"</style></head>"
 "<form action=\"/login\" method=\"POST\">"
 "<input type=\"text\" name=\"Line1\" placeholder=\"Line1\" size='20' maxlength='20'></br>"
 "<input type=\"text\" name=\"Line2\" placeholder=\"Line2\" size='20' maxlength='20'></br>"
 "<input type=\"text\" name=\"Line3\" placeholder=\"Line3\" size='20' maxlength='20'></br>"
 "<input type=\"text\" name=\"Line4\" placeholder=\"Line4\" size='20' maxlength='20'></br>"
 "<input class=\"button\" type=\"submit\" value=\"Continue\">"
-"</form><p>Please insert text to display on the unit.</p></center>");
+"</form><p>Please insert text to display on the unit.</p>");
 }
 
 void handleLogin() {                         // If a POST request is made to URI /login
