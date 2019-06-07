@@ -18,14 +18,15 @@ ESP8266WebServer server(80);
 // Go to http://192.168.4.1 in a web browser
 void handleRoot() {
 server.send(200, "text/html", "<head> <meta name='viewport' content='width=device-width,initial-scale=1'><title>Insert Text</title>"
-"<style>html, body {width: 300%;height: 300%;;margin: 0;padding: 0;background-color: red;}h1{margin: 0;padding: 0;</style></head>"
+"<style>html, body {width: 300%;height: 300%;;margin: 0;padding: 0;background-color: red;}h1{margin: 0;padding: 0; } .button:hover { background-color: #4CAF50; /* Green button */color: white; }.button{-webkit-transition-duration: 0.4s; /* Safari */transition-duration: 0.4s; }"
+"</style></head><center>"
 "<form action=\"/login\" method=\"POST\">"
 "<input type=\"text\" name=\"Line1\" placeholder=\"Line1\" size='20' maxlength='20'></br>"
 "<input type=\"text\" name=\"Line2\" placeholder=\"Line2\" size='20' maxlength='20'></br>"
 "<input type=\"text\" name=\"Line3\" placeholder=\"Line3\" size='20' maxlength='20'></br>"
 "<input type=\"text\" name=\"Line4\" placeholder=\"Line4\" size='20' maxlength='20'></br>"
-"<input type=\"submit\" value=\"Continue\">"
-"</p>");
+"<input class=\"button\" type=\"submit\" value=\"Continue\">"
+"</form><p>Please insert text to display on the unit.</p></center>");
 }
 
 void handleLogin() {                         // If a POST request is made to URI /login
@@ -33,7 +34,7 @@ server.send(200, "text/html", "<head> <meta name='viewport' content='width=devic
 "<title>Text Complete</title><style>html,body {width: 100%;height: 100%;margin: 0;padding: 0;background-color: red;}"
 "h1 {margin: 0;padding: 0;</style></head>"
 "<h1></br>" + server.arg("Line1") + server.arg("Line2") + server.arg("Line3") + server.arg("Line4") + "<form action=\"/\" method=\"POST\">"
-"</br> <input type=\"submit\" value=\"Continue\">");
+"</br> <input  class=\"button\" type=\"submit\" value=\"Continue\">");
 
 lcd.clear();
 lcd.setCursor(0,0);
